@@ -1,0 +1,58 @@
+/* 
+mandatory 5 pomts deductoin if missing
+ID: 12345678
+Name: Eduardo Naranjo
+File Name: styles.css
+Date: 2025-02-13
+
+*/
+
+/* selectors */
+/* 1. element selectors */
+/* all p on my page */
+p {
+    color: yellow;
+    background-color: black;
+}
+
+/* 2. class selector */
+.blue {
+    color: blue;
+    background-color: white;
+}
+
+.green {
+    color: green;
+    background-color: white;
+}
+
+.red_right {
+    color: red;
+    text-align: right;
+    background-color: white;
+}
+
+/* 3. ID selector */
+
+#blue20 {
+    color: blue;
+    font-size: 20px;
+    background-color: white;
+}
+
+#blue2em {
+    color: blue;
+    font-size: 2em;
+    background-color: white;
+}
+
+#blue16 {
+    color: blue;
+    font-size: 16px;
+    background-color: white;
+}
+
+#purple {
+    color: purple;
+    background-color: white;
+}
