@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+</head>
+
+<body>
+
+    <h3>User Form</h3>
+
+    <div style="float: left; width: 50%;">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input type="text" name="fname" id="fname">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" name="lname" id="lname">
+                </td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>
+                    <input type="text" name="phone" id="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="text" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <input type="number" name="age" id="age">
+                </td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>
+                    <select name="state" id="state">
+                        <option value="" selected>-select state-</option>
+                        <option value="NY">New York</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="CT">Connecticut</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Highest Degree</td>
+                <td>
+                    <input type="radio" name="degree" id="degree1" value="hs"> High School<br>
+                    <input type="radio" name="degree" id="degree2" value="sc"> Some College no Degree<br>
+                    <input type="radio" name="degree" id="degree3" value="ad"> Associate Degree<br>
+                    <input type="radio" name="degree" id="degree4" value="bd"> Bachelor's Degree<br>
+                    <input type="radio" name="degree" id="degree5" value="md"> Masters Degree<br>
+                    <input type="radio" name="degree" id="degree6" value="phd"> Phd<br>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Techologies</td>
+                <td>
+                    <input type="checkbox" name="tech" id="html" value="html"> HTML<br>
+                    <input type="checkbox" name="tech" id="css" value="css"> CSS<br>
+                    <input type="checkbox" name="tech" id="js" value="js"> Java Script
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="getUserInfo()">Save User Information</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="float: right; width: 50%;">
+        <pre id="result"></pre>
+    </div>
+
+
+
+    <script>
+        function getUserInfo() {
+            // make sure the control goes inside the fucntion
+            console.log("Inside the fucntion getUserInfo()");
+
+            // create js variables (var or let)
+            var fname, lname, phone, email, age, state, degree, tech = "";
+
+            fname = document.getElementById("fname").value;
+            console.log("First name: " + fname);
+            document.getElementById("result").innerHTML = "First name: " + fname;
+
+            lname = document.getElementById("lname").value;
+            console.log("Last name: " + lname);
+
+            phone = document.getElementById("phone").value;
+            console.log("Phone: " + phone);
+
+            email = document.getElementById("email").value;
+            console.log("Email: " + email);
+
+            age = document.getElementById("age").value;
+            console.log("Age: " + age);
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
