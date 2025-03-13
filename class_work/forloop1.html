@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+
+</head>
+
+<body>
+
+    <h3>Use of a for loop with an array</h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="products_table"></tbody>
+    </table>
+
+    <script>
+        var my_array = [
+            1,   // 0 
+            "2", // 1
+            3,   // 2
+            "A", // 3
+            true
+        ];
+
+        var table_row = "";
+
+        for (var i = 0; i < my_array.length; i++) {
+            table_row += "<tr>";
+            table_row += "<td>" + my_array[i] + "</td>";
+            table_row += "</tr>";
+            console.log(my_array[i]);
+        }
+
+        document.getElementById("products_table").innerHTML = table_row;
+
+    </script>
+
+</body>
+
+</html>
