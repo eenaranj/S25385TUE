@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="students_list"></tbody>
+    </table>
+
+    <script>
+        function init() {
+            // Create an array of objects
+            var students = [
+                { id: 1, fname: "John", lname: "Smith", age: 25, email: "js@email.com" },
+                { id: 2, fname: "Mary", lname: "Castro", age: 24, email: "mc@email.com" },
+                { id: 3, fname: "Ann", lname: "Naranjo", age: 22, email: "an@email.com" }
+            ];
+
+            let tbl_row = "";
+
+            for (var i = 0; i < students.length; i++) {
+                tbl_row += "<tr>";
+                tbl_row += "<td>" + students[i].id + "</td>";
+                tbl_row += "<td>" + students[i].fname + "</td>";
+                tbl_row += "<td>" + students[i].lname + "</td>";
+                tbl_row += "<td>" + students[i].age + "</td>";
+                tbl_row += "<td>" + students[i].email + "</td>";
+                tbl_row += "</tr>";
+            }
+
+            document.getElementById("students_list").innerHTML =
+                tbl_row;
+
+        }
+
+        window.onload = init;
+    </script>
+
+</body>
+
+</html>

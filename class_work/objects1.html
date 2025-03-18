@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+
+    <p id="data"></p>
+
+    <script>
+        function init() {
+            // Create an object variable
+            var student = {
+                id: 1,
+                fname: "John",
+                lname: "Smith",
+                age: 25,
+                email: "js@email.com",
+                full_name: function () { this.fname + " " + this.lname }
+            };
+            console.log("Student First Name" + student.fname);
+            document.getElementById("data").innerHTML +=
+                "Student First Name: " + student.fname + "<br>";
+            document.getElementById("data").innerHTML +=
+                "Student Last Name: " + student.lname + "<br>";
+            document.getElementById("data").innerHTML +=
+                "Student Email: " + student.email + "<br>";
+            //document.getElementById("data").innerHTML +=
+            //    student.full_name;
+        }
+
+        window.onload = init;
+    </script>
+
+</body>
+
+</html>
