@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Major</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Credit/Hrs</th>
+            </tr>
+        </thead>
+        <tbody id="mylist"></tbody>
+    </table>
+
+    <select name="states" id="states">
+    </select>
+
+    <script>
+        function init() {
+            var c = [
+                { dumb2: "100", dumb3: "Introduction to Computer Applications ", dumb4: "3 CRS.4 HRS.", dumb1: "CIS" },
+                { dumb1: "CIS", dumb2: "385", dumb3: "Web Programming I", dumb4: "3 CRS.4 HRS." },
+                { dumb3: "Web Programming II", dumb1: "CIS", dumb2: "485", dumb4: "3 CRS.4 HRS." }
+            ];
+
+            var tblrow = "";
+
+            for (var i = 0; i < c.length; i++) {
+                // create a table row for each element of the array
+                tblrow += "<tr>";
+                tblrow += "<td>" + c[i].dumb4 + "</td>";
+                tblrow += "<td>" + c[i].dumb1 + "</td>";
+                tblrow += "<td>" + c[i].dumb2 + "</td>";
+                tblrow += "<td>" + c[i].dumb3 + "</td>";
+
+                tblrow += "</tr>";
+            }
+
+            document.getElementById("mylist").innerHTML = tblrow;
+
+            //-----------------
+            let states = [
+                { state_code: "AL", state_name: "Alabama" },
+                { state_code: "AK", state_name: "Alaska" },
+                { state_code: "AR", state_name: "Arizona" },
+                { state_code: "AK", state_name: "Arkansas" },
+                { state_code: "CA", state_name: "California" },
+                { state_code: "CO", state_name: "Colorado" },
+                { state_code: "CT", state_name: "Connecticut" },
+                { state_code: "DE", state_name: "Delaware" }
+            ];
+
+            var options = "";
+
+            for(var i = 0; i < states.length; i++){
+                options += "<option value = '" + states[i].state_code + "'>" + states[i].state_name + "</option>";
+            }
+
+            document.getElementById("states").innerHTML = options;
+        }
+
+        window.onload = init;
+    </script>
+
+</body>
+
+</html>
