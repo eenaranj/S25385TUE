@@ -34,13 +34,23 @@
             let tbl_row = "";
 
             for (var i = 0; i < students.length; i++) {
-                tbl_row += "<tr>";
-                tbl_row += "<td>" + students[i].id + "</td>";
-                tbl_row += "<td>" + students[i].fname + "</td>";
-                tbl_row += "<td>" + students[i].lname + "</td>";
-                tbl_row += "<td>" + students[i].age + "</td>";
-                tbl_row += "<td>" + students[i].email + "</td>";
-                tbl_row += "</tr>";
+                // tbl_row += "<tr>";
+                // tbl_row += "<td>" + students[i].id + "</td>";
+                // tbl_row += "<td>" + students[i].fname + "</td>";
+                // tbl_row += "<td>" + students[i].lname + "</td>";
+                // tbl_row += "<td>" + students[i].age + "</td>";
+                // tbl_row += "<td>" + students[i].email + "</td>";
+                // tbl_row += "</tr>";
+
+                // String template
+                tbl_row += `<tr>
+                                <td>${students[i].id}</td>
+                                <td>${students[i].fname}</td>
+                                <td>${students[i].lname}</td>
+                                <td align="right">${students[i].age}</td>
+                                <td>${students[i].email}</td>
+                            </tr>`;
+
             }
 
             document.getElementById("students_list").innerHTML =
