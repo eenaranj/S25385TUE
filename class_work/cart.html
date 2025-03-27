@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+    .right_justified{
+        text-align: right;
+    }
+</style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h3>Shipping Cart Content</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Description</th>
+                        <th>Unit Price</th>
+                        <th>Qty</th>
+                        <th>Sub-Total</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody id="cart_data">
+                    <tr>
+                        <td style="width: 20%;">
+                            <img src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg"
+                            alt="This is the long description for product 1" width="30%"></td>
+                        <td>Best Product 1</td>
+                        <td class="right_justified">$10.99</td>
+                        <td class="right_justified">1</td>
+                        <td class="right_justified">$10.99</td>
+                        <td><a href="#" class="btn btn-info btn-dm">
+                            <span class="glyphicon glyphicon-remove"></span> Remove 
+                          </a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg"
+                            alt="This is the long description for product 1" width="30%"></td>
+                        <td>Best Product 2</td>
+                        <td class="right_justified">$10.99</td>
+                        <td class="right_justified">1</td>
+                        <td class="right_justified">$10.99</td>
+                        <td><a href="#" class="btn btn-info btn-dm">
+                            <span class="glyphicon glyphicon-remove"></span> Remove 
+                          </a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td class="right_justified">2</td>
+                        <td class="right_justified">$21.98</td>
+                        <td class="right_justified"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    
+</body>
+</html>
