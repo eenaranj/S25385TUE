@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row" id="products_list"></div>
+    </div>
+
+
+
+
+    <script>
+        window.onload = function () {
+            console.log("Page loaded.");
+
+            var products = [
+                { id: 1, title: "Pampers 2", desc: "Baby Diapers - Swaddlers - Size 2, 186 Count, Ultra Absorbent Disposable Infant Diaper", price: 55.94, image: "pampers2_186.jpg" },
+                { id: 2, title: "Pampers 5", desc: "Diapers - Cruisers 360 - Size 5, 128 Count, Babyproof up to 100% Leakproof Pull-On Diaper", price: 55.94, image: "pamper5_128.jpg" },
+                { id: 3, title: "Pampers Overnite", desc: "Overnight Diapers - Swaddlers Overnights - Size 3, 116 Count, Disposable Baby Diaper, Night Time Leak and Skin Protection", price: 44.99, image: "pampers_overnite3.jpg" },
+                { id: 4, title: "Pampers 1", desc: "Baby Diapers - Swaddlers - Size 1, 96 Count, Ultra Absorbent Disposable Infant Diaper", price: "28.22", image: "pampers1_96.jpg" }
+            ];
+
+            var prod_div = "";
+
+            for(var i = 0; i < products.length; i++){
+
+                prod_div += `
+                <div class="col-md-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">${products[i].title}</div>
+                        <div class="panel-body">
+                        <p>${products[i].desc}</p>
+                        <p>Price $${products[i].price}</p>
+                        <p><img src="images/${products[i].image}" alt="${products[i].title}" width="75%"></p>
+                        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#products${products[i].id}">More Details</button></p>    
+                        
+                        </div>
+                    </div>  
+                </div> 
+                    
+                    <!-- modal -->
+                    <div id="products${products[i].id}" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">${products[i].title}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>${products[i].desc}</p>
+                                <p>Price $${products[i].price}</p>
+                                <p><img src="images/${products[i].image}" alt="${products[i].title}"></p>
+                                <p><a class="btn btn-success">Add to Cart</a></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div><!-- end of modal -->
+                `;
+            }
+
+            document.getElementById("products_list").innerHTML = prod_div;
+
+        };
+    </script>
+
+</body>
+
+</html>
